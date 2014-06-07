@@ -1,4 +1,4 @@
-WebService-Google-Voice-SendSMS version 0.01, released February 14, 2013
+WebService-Google-Voice-SendSMS version 1.000, released June 7, 2014
 
 
 This module allows you to send SMS messages using your Google Voice
@@ -29,16 +29,16 @@ DEPENDENCIES
 
 
 CHANGES
-    Here's what's new in version 0.01 of WebService-Google-Voice-SendSMS:
+    Here's what's new in version 1.000 of WebService-Google-Voice-SendSMS:
     (See the file "Changes" for the full revision history.)
 
-	- Initial release
+	- Document that you must see a TEXT button in Google Voice (RT#92040)
 
 
 
 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Christopher J. Madsen.
+This software is copyright (c) 2014 by Christopher J. Madsen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

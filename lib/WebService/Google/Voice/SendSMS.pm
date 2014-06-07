@@ -27,8 +27,8 @@ use HTTP::Request::Common ();
 
 #use Smart::Comments '###';
 
-our $VERSION = '0.01';
-# This file is part of WebService-Google-Voice-SendSMS 0.01 (February 14, 2013)
+our $VERSION = '1.000';
+# This file is part of WebService-Google-Voice-SendSMS 1.000 (June 7, 2014)
 
 #=====================================================================
 
@@ -157,8 +157,8 @@ WebService::Google::Voice::SendSMS - Send a SMS using Google Voice
 
 =head1 VERSION
 
-This document describes version 0.01 of
-WebService::Google::Voice::SendSMS, released February 14, 2013.
+This document describes version 1.000 of
+WebService::Google::Voice::SendSMS, released June 7, 2014.
 
 =head1 SYNOPSIS
 
@@ -174,6 +174,10 @@ WebService::Google::Voice::SendSMS, released February 14, 2013.
 
 WebService::Google::Voice::SendSMS allows you to send SMS messages
 using your Google Voice account (L<https://www.google.com/voice>).
+It only works if you're able to send SMS messages from the Google
+Voice website. There should be a TEXT button next to the CALL button
+in the upper left corner. If that doesn't work, then SendSMS won't
+work either.
 
 =head1 METHODS
 
@@ -256,11 +260,11 @@ or through the web interface at
 L<< http://rt.cpan.org/Public/Bug/Report.html?Queue=WebService-Google-Voice-SendSMS >>.
 
 You can follow or contribute to WebService-Google-Voice-SendSMS's development at
-L<< http://github.com/madsen/webservice-google-voice-sendsms >>.
+L<< https://github.com/madsen/webservice-google-voice-sendsms >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Christopher J. Madsen.
+This software is copyright (c) 2014 by Christopher J. Madsen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

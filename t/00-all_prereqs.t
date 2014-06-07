@@ -48,6 +48,7 @@ TEST: {
 
     while (<META>) {
       last if /^\s*\},?\s*\z/;
+      next if /^\s*"[^"]+"\s*:\s*\{\s*\},?\s*\z/;
       ok(/^\s*"(.+)" : \{\s*\z/, "found relationship $phase $1") or last TEST;
       my $rel = $1;
 
@@ -59,7 +60,10 @@ TEST: {
 
         next if $phase ne 'runtime' or $prereq eq 'perl';
 
-        my $loaded = eval "require $prereq; $prereq->VERSION($version); 1";
+        # Need a special case for if.pm, because "require if;" is a syntax error.
+        my $loaded = ($prereq eq 'if')
+            ? eval "require '$prereq.pm'; '$prereq'->VERSION($version); 1"
+            : eval "require $prereq; $prereq->VERSION($version); 1";
         if ($rel eq 'requires') {
           ok($loaded, "loaded $prereq $version")
               or printf STDERR "\n#    Got: %s %s\n# Wanted: %s %s\n",
