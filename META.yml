@@ -20,7 +20,7 @@ requires:
   perl: 5.008
 resources:
   repository: git://github.com/madsen/webservice-google-voice-sendsms.git
-version: 1.000
+version: 1.001
 x_Dist_Zilla:
   perl:
     version: 5.018002
@@ -56,7 +56,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::PrereqsFromMeta
       name: CJM/Test::PrereqsFromMeta
-      version: 4.21
+      version: 4.23
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: CJM/PodSyntaxTests
@@ -86,7 +86,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MatchManifest
       name: CJM/MatchManifest
-      version: 4.01
+      version: 4.02
     -
       class: Dist::Zilla::Plugin::RecommendedPrereqs
       name: CJM/RecommendedPrereqs
@@ -120,7 +120,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: '.'
       name: CJM/@Git/Check
-      version: 2.021
+      version: 2.025
     -
       class: Dist::Zilla::Plugin::Git::Commit
       config:
@@ -136,21 +136,21 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: '.'
       name: CJM/@Git/Commit
-      version: 2.021
+      version: 2.025
     -
       class: Dist::Zilla::Plugin::Git::Tag
       config:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 1.000
+          tag: 1.001
           tag_format: '%v%t'
           tag_message: 'Tagged %N %v%{ (trial release)}t'
           time_zone: local
         Dist::Zilla::Role::Git::Repo:
           repo_root: '.'
       name: CJM/@Git/Tag
-      version: 2.021
+      version: 2.025
     -
       class: Dist::Zilla::Plugin::Git::Push
       config:
@@ -161,7 +161,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: '.'
       name: CJM/@Git/Push
-      version: 2.021
+      version: 2.025
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: CJM/TestRelease

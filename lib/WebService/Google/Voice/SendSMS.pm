@@ -27,8 +27,8 @@ use HTTP::Request::Common ();
 
 #use Smart::Comments '###';
 
-our $VERSION = '1.000';
-# This file is part of WebService-Google-Voice-SendSMS 1.000 (June 7, 2014)
+our $VERSION = '1.001';
+# This file is part of WebService-Google-Voice-SendSMS 1.001 (November 1, 2014)
 
 #=====================================================================
 
@@ -157,8 +157,8 @@ WebService::Google::Voice::SendSMS - Send a SMS using Google Voice
 
 =head1 VERSION
 
-This document describes version 1.000 of
-WebService::Google::Voice::SendSMS, released June 7, 2014.
+This document describes version 1.001 of
+WebService::Google::Voice::SendSMS, released November 1, 2014.
 
 =head1 SYNOPSIS
 
@@ -246,6 +246,28 @@ None reported.
 WebService::Google::Voice::SendSMS can only send SMS messages. It
 can't receive them, retrieve the history of sent messages, or access
 any other Google Voice features.
+
+=head2 Troubleshooting
+
+If WebService::Google::Voice::SendSMS doesn't work for you, the first
+thing to check is that you can send a SMS message by logging in to the
+Google Voice website in your browser.  If that doesn't work, you'll
+have to try to work the problem out with Google.
+
+If you're getting a HTTP 403 (Forbidden) error, then you may have
+supplied the wrong username or password.  If those are correct, you
+may need to log in to your Google account and enable "Access for less
+secure apps".  To do that, go to L<https://google.com>, log in if
+necessary, click your username in the upper right corner, click
+Account, click Security, and make sure it says Enabled next to "Access
+for less secure apps".  If it doesn't, click Settings and change it.
+(If anyone knows how this module can use a more secure login method,
+I'd be happy to hear about it.)
+
+If it's still not working, please install the L<Smart::Comments> module,
+uncomment the C<use Smart::Comments> line at the beginning of this
+module, and include the debugging output in your bug report.  (Be sure
+to sanitize your password.)
 
 =for Pod::Coverage
 \w+URL
